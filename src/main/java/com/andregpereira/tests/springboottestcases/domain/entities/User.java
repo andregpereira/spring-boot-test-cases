@@ -3,15 +3,17 @@ package com.andregpereira.tests.springboottestcases.domain.entities;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "tb_users")
-@SequenceGenerator(name = "user", sequenceName = "sq_users", allocationSize = 1)
+@SequenceGenerator(name = "user", sequenceName = "sq_users", allocationSize = 1, initialValue = 1)
 public class User {
 
     @Id
@@ -30,3 +32,4 @@ public class User {
     private Address address;
 
 }
+
