@@ -23,8 +23,6 @@ public class UserRepositoryUnitTest {
 
     @Autowired
     private TestEntityManager em;
-//    @BeforeEach
-//    public void beforeEach
 
     @Test
     @Rollback(value = false)
